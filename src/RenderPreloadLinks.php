@@ -11,7 +11,7 @@ class RenderPreloadLinks
     /** @var array */
     protected $manifest;
 
-    public static function create(string $manifestPath = null): MixPreload
+    public static function create(string $manifestPath = null): RenderPreloadLinks
     {
         if (!$manifestPath) {
             $manifestPath = public_path('mix-manifest.json');
