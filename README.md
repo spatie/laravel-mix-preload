@@ -1,4 +1,4 @@
-# Add preload and prefetch links from Laravel Mix
+# Add preload and prefetch links based your Mix manifest
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-mix-preload.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-mix-preload)
 [![Build Status](https://img.shields.io/travis/spatie/laravel-mix-preload/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-mix-preload)

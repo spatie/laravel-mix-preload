@@ -1,6 +1,6 @@
 {
     "name": "spatie/laravel-mix-preload",
-    "description": "Preload and prefetch assets based on mix-manifest contents",
+    "description": "Add preload and prefetch links based your Mix manifest",
     "keywords": [
         "spatie",
         "laravel-mix-preload"
