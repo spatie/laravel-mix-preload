@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class MixPreloadServiceProvider extends ServiceProvider
 {
-    public function register()
+    public function boot()
     {
         Blade::directive('preload', function ($expression) {
             return "<?php echo \Spatie\MixPreload\MixPreload::create($expression)(); ?>";
