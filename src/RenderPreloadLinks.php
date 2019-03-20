@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 
-class MixPreload
+class RenderPreloadLinks
 {
     /** @var array */
     protected $manifest;

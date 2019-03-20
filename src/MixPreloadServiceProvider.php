@@ -10,7 +10,7 @@ class MixPreloadServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::directive('preload', function ($expression) {
-            return "<?php echo \Spatie\MixPreload\MixPreload::create($expression)(); ?>";
+            return "<?php echo \Spatie\MixPreload\RenderPreloadLinks::create($expression)(); ?>";
         });
     }
 }

@@ -3,16 +3,16 @@
 namespace Spatie\MixPreload\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Spatie\MixPreload\MixPreload;
+use Spatie\MixPreload\RenderPreloadLinks;
 
-class ExampleTest extends TestCase
+class RenderPreloadLinksTest extends TestCase
 {
     /** @var string */
     protected $links;
 
     public function setUp(): void
     {
-        $this->links = (new MixPreload([
+        $this->links = (new RenderPreloadLinks([
             '/js/app.js' => '/js/app.js',
             '/js/preload-something.js' => '/js/preload-something.js',
             '/js/vendors~preload-something.js' => '/js/vendors~preload-something.js',
