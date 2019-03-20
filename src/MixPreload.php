@@ -50,7 +50,7 @@ class MixPreload
             })
             ->filter()
             ->pipe(function (Collection $links) {
-                return new HtmlString($links->join('\n'));
+                return new HtmlString($links->implode("\n"));
             });
     }
 
