@@ -44,10 +44,7 @@
         "laravel": {
             "providers": [
                 "Spatie\\MixPreload\\MixPreloadServiceProvider"
-            ],
-            "aliases": {
-                "MixPreload": "Spatie\\MixPreload\\MixPreloadFacade"
-            }
+            ]
         }
     }
 }
