@@ -11,8 +11,12 @@ class MixPreload
     /** @var array */
     protected $manifest;
 
-    public static function create(string $manifestPath): MixPreload
+    public static function create(string $manifestPath = null): MixPreload
     {
+        if (!$manifestPath) {
+            $manifestPath = public_path('mix-manifest.json');
+        }
+
         $manifest = json_decode(
             file_get_contents($manifestPath),
             true
