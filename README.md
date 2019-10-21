@@ -35,6 +35,8 @@ The following links will be rendered:
 <link rel="preload" href="/js/vendors~preload-biglibrary.js" as="script">
 ```
 
+Not sure what this is about? Read Addy Osmani's article [Preload, Prefetch And Priorities in Chrome](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf).
+
 ## Installation
 
 You can install the package via composer:
@@ -58,6 +60,44 @@ Add a `@preload` directive to your applications layout file(s).
         ...
     </body>
 </html>
+```
+
+You can determine which scripts need to be preloaded or prefetched by making sure `preload` or `prefetch` is part of their file names. You can set the file name by creating a new entry in Mix, or by using dynamic imports.
+
+### Adding a second entry
+
+By default, Laravel sets up Mix with a single `app.js` entry. If you have another script outside of `app.js` that you want to have preloaded, make sure `preload` is part of the entry name.
+
+```js
+mix
+    .js('resources/js/app.js', 'public/js');
+    .js('resources/js/preload-maps.js', 'public/js');
+```
+
+If you want to prefetch the script instead, make sure `prefetch` is part of the entry name.
+
+```js
+mix
+    .js('resources/js/app.js', 'public/js');
+    .js('resources/js/prefetch-maps.js', 'public/js');
+```
+
+### Using dynamic imports with custom chunk names
+
+If you want to preload a chunk of your application scripts, make sure `preload` is part of the chunk name. You can use Webpack's magic `webpackChunkName` comment to set the module's chunk name.
+
+```js
+import('./maps' /* webpackChunkName: "preload-maps" */).then(maps => {
+    maps.init();
+});
+```
+
+The same applies to prefetching.
+
+```js
+import('./maps' /* webpackChunkName: "prefetch-maps" */).then(maps => {
+    maps.init();
+});
 ```
 
 ### Testing
