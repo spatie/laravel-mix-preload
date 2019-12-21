@@ -78,11 +78,11 @@ class RenderPreloadLinks
 
     protected function getAsAttribute(string $path): ?string
     {
-        if (Str::endsWith($path, '.js')) {
+        if (Str::contains($path, '.js')) {
             return 'script';
         }
 
-        if (Str::endsWith($path, '.css')) {
+        if (Str::contains($path, '.css')) {
             return 'style';
         }
 
