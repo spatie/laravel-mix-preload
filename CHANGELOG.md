@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-mix-preload` will be documented in this file.
 
+## 1.1.0
+- Add Laravel 7.0 support
+
 ## 1.0.1 - 2020-01-20
 - Add support for manifests versioned with query string
 
