@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-mix-preload` will be documented in this file.
 
+## 1.2.0
+- Add font support
+
 ## 1.1.0
 - Add Laravel 7.0 support
 
