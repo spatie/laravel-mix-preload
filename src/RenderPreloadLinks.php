@@ -85,6 +85,10 @@ class RenderPreloadLinks
         if (Str::contains($path, '.css')) {
             return 'style';
         }
+        
+        if (Str::contains($path, ['.woff', '.woff2', '.ttf', '.eot', '.svg', '.ttc'])) {
+            return 'font';
+        }
 
         return null;
     }
