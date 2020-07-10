@@ -110,6 +110,14 @@ import('./maps' /* webpackChunkName: "prefetch-maps" */).then(maps => {
 });
 ```
 
+### Specifying a custom preload URL
+
+If you wish to preload links from a different URL than your application, you may specify that URL as the second parameter to the Blade `preload` directive:
+
+```
+@preload(public_path('mix-manifest.json'), 'https://cdn.example.com')
+```
+
 ### Testing
 
 ``` bash
