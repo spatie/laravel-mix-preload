@@ -101,7 +101,7 @@ class RenderPreloadLinks
 
     protected function getHrefAttribute(string $path): ?string
     {
-        if ($this->assetUrl) {
+        if ($this->assetUrl !== null) {
             return $this->assetUrl . $path;
         }
 
