@@ -11,7 +11,10 @@ class RenderPreloadLinks
     /** @var array */
     protected $manifest;
 
-    public static function create(string $manifestPath = null): RenderPreloadLinks
+    /** @var string|null */
+    protected $assetUrl;
+
+    public static function create(string $manifestPath = null, string $assetUrl = null): RenderPreloadLinks
     {
         if (!$manifestPath) {
             $manifestPath = public_path('mix-manifest.json');
@@ -22,12 +25,13 @@ class RenderPreloadLinks
             true
         );
 
-        return new self($manifest);
+        return new self($manifest, $assetUrl);
     }
 
-    public function __construct(array $manifest)
+    public function __construct(array $manifest, string $assetUrl = null)
     {
         $this->manifest = $manifest;
+        $this->assetUrl = $assetUrl;
     }
 
     public function __invoke(): HtmlString
@@ -45,6 +49,8 @@ class RenderPreloadLinks
                 if (!$as) {
                     return null;
                 }
+
+                $path = $this->getHrefAttribute($path);
 
                 return "<link rel=\"{$rel}\" href=\"{$path}\" as=\"{$as}\">";
             })
@@ -91,5 +97,14 @@ class RenderPreloadLinks
         }
 
         return null;
+    }
+
+    protected function getHrefAttribute(string $path): ?string
+    {
+        if ($this->assetUrl) {
+            return $this->assetUrl . $path;
+        }
+
+        return $path;
     }
 }
