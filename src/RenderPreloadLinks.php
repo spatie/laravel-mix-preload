@@ -13,7 +13,7 @@ class RenderPreloadLinks
 
     public static function create(string $manifestPath = null): RenderPreloadLinks
     {
-        if (!$manifestPath) {
+        if (! $manifestPath) {
             $manifestPath = public_path('mix-manifest.json');
         }
 
@@ -36,13 +36,13 @@ class RenderPreloadLinks
             ->mapSpread(function (string $path, string $name) {
                 $rel = $this->getRelAttribute($name);
 
-                if (!$rel) {
+                if (! $rel) {
                     return null;
                 }
 
                 $as = $this->getAsAttribute($path);
 
-                if (!$as) {
+                if (! $as) {
                     return null;
                 }
 
