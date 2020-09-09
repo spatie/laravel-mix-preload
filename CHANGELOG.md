@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-mix-preload` will be documented in this file.
 
+## 1.2.2 - 2020-09-09
+
+- Support Laravel 8
+
 ## 1.2.0
 - Add font support
 

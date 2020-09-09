@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-mix-preload.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-mix-preload)
 [![Build Status](https://img.shields.io/travis/spatie/laravel-mix-preload/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-mix-preload)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-mix-preload.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-mix-preload)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-mix-preload.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-mix-preload)
 
 ```blade
