@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-mix-preload` will be documented in this file.
 
+## 1.3.1 - 2023-02-01
+
+### What's Changed
+
+- Laravel 10.x Compatibility by @laravel-shift in https://github.com/spatie/laravel-mix-preload/pull/14
+
+### New Contributors
+
+- @laravel-shift made their first contribution in https://github.com/spatie/laravel-mix-preload/pull/14
+
+**Full Changelog**: https://github.com/spatie/laravel-mix-preload/compare/1.3.0...1.3.1
+
 ## 1.3.0 - 2022-02-01
 
 - Add support for PHP 8.1
