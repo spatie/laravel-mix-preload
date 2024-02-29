@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-mix-preload` will be documented in this file.
 
+## 1.4.0 - 2024-02-29
+
+### What's Changed
+
+* Laravel 11.x Compatibility by @laravel-shift in https://github.com/spatie/laravel-mix-preload/pull/15
+
+**Full Changelog**: https://github.com/spatie/laravel-mix-preload/compare/1.3.1...1.4.0
+
 ## 1.3.1 - 2023-02-01
 
 ### What's Changed
