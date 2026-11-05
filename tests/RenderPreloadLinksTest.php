@@ -24,8 +24,7 @@ class RenderPreloadLinksTest extends TestCase
         ]))();
     }
 
-    /** @test */
-    public function it_generates_preload_script_links()
+    public function test_it_generates_preload_script_links()
     {
         $this->assertStringContainsString(
             '<link rel="preload" href="/js/preload-something.js" as="script">',
@@ -38,8 +37,7 @@ class RenderPreloadLinksTest extends TestCase
         );
     }
 
-    /** @test */
-    public function it_generates_prefetch_script_links()
+    public function test_it_generates_prefetch_script_links()
     {
         $this->assertStringContainsString(
             '<link rel="prefetch" href="/js/prefetch-something.js" as="script">',
@@ -52,8 +50,7 @@ class RenderPreloadLinksTest extends TestCase
         );
     }
 
-    /** @test */
-    public function it_generates_preload_style_links()
+    public function test_it_generates_preload_style_links()
     {
         $this->assertStringContainsString(
             '<link rel="preload" href="/css/preload-something.css" as="style">',
@@ -61,8 +58,7 @@ class RenderPreloadLinksTest extends TestCase
         );
     }
 
-    /** @test */
-    public function it_generates_prefetch_style_links()
+    public function test_it_generates_prefetch_style_links()
     {
         $this->assertStringContainsString(
             '<link rel="prefetch" href="/css/prefetch-something.css" as="style">',
@@ -70,8 +66,7 @@ class RenderPreloadLinksTest extends TestCase
         );
     }
 
-    /** @test */
-    public function it_doesnt_generate_unnecessary_preload_or_prefetch_links()
+    public function test_it_doesnt_generate_unnecessary_preload_or_prefetch_links()
     {
         $this->assertStringNotContainsString(
             '<link rel="preload" href="/js/app.js" as="script">',
